@@ -1,0 +1,24 @@
+name: Node.js CI
+
+on:
+  push:
+    branchs:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on : ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: action/checkout@v4
+      - name: Set up Node.js
+        uses: action/checkout@v4 
+        with:
+          node-version : '18'
+      - name: Insatll dependencies
+        uses: npm install
+      - name: Run Test
+        uses: npm test
