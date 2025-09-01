@@ -18,7 +18,7 @@ jobs:
         uses: action/checkout@v4 
         with:
           node-version : '18'
-      - name: Insatll dependencies
+      - name: install dependencies
         uses: npm install
       - name: Run Test
         uses: npm test
